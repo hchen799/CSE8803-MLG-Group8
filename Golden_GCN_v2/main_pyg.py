@@ -259,8 +259,8 @@ def main():
         #train_curve.append(train_perf[dataset.eval_metric])
         valid_curve.append(valid_perf[dataset.eval_metric])
         test_curve.append(test_perf[dataset.eval_metric])
-        torch.save(atom_encoder.state_dict(), '%s_ep%d_dim%d_atom_encoder.pt' % (args.gnn, epoch, args.emb_dim))
-        torch.save(model.state_dict(), '%s_ep%d_dim%d.pt' % (args.gnn, epoch, args.emb_dim))
+        torch.save(atom_encoder.state_dict(), './GIN_ogbgmol_weights_new/%s_ep%d_dim%d_atom_encoder.pt' % (args.gnn, epoch, args.emb_dim))
+        torch.save(model.state_dict(), './GIN_ogbgmol_weights_new/%s_ep%d_dim%d.pt' % (args.gnn, epoch, args.emb_dim))
 
     if 'classification' in dataset.task_type:
         best_val_epoch = np.argmax(np.array(valid_curve))
@@ -277,3 +277,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
