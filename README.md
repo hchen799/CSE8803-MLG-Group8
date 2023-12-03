@@ -45,3 +45,8 @@ For GIN:
 
 python main_pyg_validate.py --gnn gin --use_explainer false
 
+
+If want to insert faults to GNN hidden layers, go into folder Insert_faults_to_hidden_layers_code,
+
+and then run python main_pyg_validate.py --gnn gcn --use_explainer false for GNN and python main_pyg_validate.py --gnn gin --use_explainer false for GIN with correct configurations. 
+
